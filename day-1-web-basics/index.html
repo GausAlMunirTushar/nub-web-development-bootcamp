@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CampusConnect helps students organize projects and collaborate with their classmates."
+    />
+    <title>CampusConnect | Student Project Management</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="CampusConnect home">
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <span>CampusConnect</span>
+        </a>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#about">About</a>
+          <a class="nav-button" href="#register">Join now</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">Built for students</p>
+            <h1>Turn your campus ideas into real projects.</h1>
+            <p class="hero-text">
+              Organize tasks, find teammates, and keep every project moving from
+              one simple workspace.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#register">Get started</a>
+              <a class="button button-secondary" href="#features">Explore features</a>
+            </div>
+          </div>
+
+          <div class="project-preview" aria-label="CampusConnect project preview">
+            <div class="preview-header">
+              <div>
+                <p class="preview-label">My workspace</p>
+                <h2>Campus projects</h2>
+              </div>
+              <span class="status-badge">3 active</span>
+            </div>
+            <div class="preview-list">
+              <article class="preview-card">
+                <div class="project-icon project-icon-purple" aria-hidden="true">W</div>
+                <div>
+                  <h3>Web Development</h3>
+                  <p>Bootcamp project</p>
+                </div>
+                <span class="progress">80%</span>
+              </article>
+              <article class="preview-card">
+                <div class="project-icon project-icon-blue" aria-hidden="true">AI</div>
+                <div>
+                  <h3>AI Research</h3>
+                  <p>Team assignment</p>
+                </div>
+                <span class="progress">55%</span>
+              </article>
+              <article class="preview-card">
+                <div class="project-icon project-icon-green" aria-hidden="true">M</div>
+                <div>
+                  <h3>Mobile App</h3>
+                  <p>Design sprint</p>
+                </div>
+                <span class="progress">35%</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features-section" id="features">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Everything in one place</p>
+            <h2>Stay organized throughout the semester</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">01</div>
+              <h3>Manage projects</h3>
+              <p>Create projects, set milestones, and track progress clearly.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">02</div>
+              <h3>Collaborate easily</h3>
+              <p>Bring classmates together and assign work without confusion.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">03</div>
+              <h3>Meet deadlines</h3>
+              <p>Keep important dates visible so every team knows what comes next.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="container about-grid">
+          <div>
+            <p class="eyebrow">One connected campus</p>
+            <h2>Focus on building, not on organizing.</h2>
+          </div>
+          <p>
+            CampusConnect gives university teams a clean and accessible place
+            to plan projects, share updates, and complete assignments together.
+          </p>
+        </div>
+      </section>
+
+      <section class="registration-section" id="register">
+        <div class="container registration-grid">
+          <div class="registration-copy">
+            <p class="eyebrow">Join CampusConnect</p>
+            <h2>Create your student workspace.</h2>
+            <p>
+              Enter your details below. Your submitted information will appear
+              immediately on the page.
+            </p>
+          </div>
+
+          <form class="registration-form" id="registrationForm" novalidate>
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="student@university.edu"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="department">Department</label>
+              <input
+                type="text"
+                id="department"
+                name="department"
+                placeholder="Example: CSE"
+                required
+              />
+            </div>
+
+            <button class="button button-primary form-button" type="submit">
+              Submit
+            </button>
+          </form>
+
+          <div class="submission-result" id="submissionResult" aria-live="polite" hidden>
+            <p class="result-title">Registration submitted</p>
+            <dl>
+              <div>
+                <dt>Name</dt>
+                <dd id="resultName"></dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd id="resultEmail"></dd>
+              </div>
+              <div>
+                <dt>Department</dt>
+                <dd id="resultDepartment"></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <a class="brand footer-brand" href="#home">
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <span>CampusConnect</span>
+        </a>
+        <p>One workspace. Better student projects.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
