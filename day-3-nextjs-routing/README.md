@@ -1,11 +1,10 @@
 # Day 3 — Next.js and Routing
 
-Day 3 introduces Next.js website architecture, the App Router and reusable
-layout components. The live example is a three-page CampusConnect website.
+This practical introduces Next.js project structure, the App Router and
+reusable layouts. The implementation is a three-page CampusConnect website.
 
-The project was scaffolded with the latest Next.js CLI using JavaScript,
-the App Router, ESLint and npm. To create a fresh project with the same
-options, run:
+The project was created with the Next.js CLI using JavaScript, the App
+Router, ESLint and npm:
 
 ```bash
 npx create-next-app@latest campusconnect --javascript --app --use-npm --eslint --no-tailwind --import-alias "@/*"
@@ -20,7 +19,7 @@ npx create-next-app@latest campusconnect --javascript --app --use-npm --eslint -
 | 20–30 minutes | App Router and routing |
 | 30–40 minutes | Layout and reusable components |
 | 40–55 minutes | Live coding: Three-page website |
-| 55–60 minutes | Quick quiz |
+| 55–60 minutes | Review and quick quiz |
 
 ## Core Goal
 
@@ -31,23 +30,7 @@ Understand:
 - Components
 - Project architecture
 
-## Three-Page Structure
-
-```text
-app/
-├── page.js
-├── about/
-│   └── page.js
-├── dashboard/
-│   └── page.js
-└── layout.js
-
-components/
-├── Navbar.js
-└── Footer.js
-```
-
-The implemented project structure is:
+## Implemented Project
 
 ```text
 day-3-nextjs-routing/
@@ -88,6 +71,8 @@ day-3-nextjs-routing/
 
 ## Run the Project
 
+Requires Node.js 24 or newer.
+
 Install dependencies:
 
 ```bash
@@ -109,6 +94,7 @@ Open:
 Create a production build:
 
 ```bash
+npm run lint
 npm run build
 ```
 
@@ -124,6 +110,8 @@ Prepare the complete folder structure for your startup website. Include:
 - A Navbar
 - A Footer
 - Any startup-specific reusable components
+
+Check that every navigation link resolves to a real route.
 
 ## Learning Outcomes
 

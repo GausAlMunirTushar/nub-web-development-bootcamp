@@ -3,9 +3,8 @@
 Day 4 demonstrates how data moves from a browser frontend through an
 Express 5 REST API into MongoDB.
 
-The PDF's database exercise mentions PostgreSQL or Supabase. This
-implementation uses MongoDB as requested; the frontend → API → database
-flow and CRUD learning goals stay the same.
+The implementation uses MongoDB. This provides the complete frontend,
+API and database flow for the CRUD exercise.
 
 ## 60-Minute Schedule
 
@@ -110,6 +109,17 @@ npm test
 
 The API tests use an in-memory repository and do not require a live MongoDB
 instance.
+
+## Code Organization
+
+| Folder or file | Responsibility |
+|---|---|
+| `server.js` | Starts the HTTP server and MongoDB connection |
+| `src/app.js` | Configures middleware and routes |
+| `src/routes/` | Maps HTTP methods to controller functions |
+| `src/controllers/` | Handles requests and responses |
+| `src/services/` | Validates and processes project data |
+| `src/repositories/` | Reads and writes MongoDB documents |
 
 ## MongoDB Document Model
 

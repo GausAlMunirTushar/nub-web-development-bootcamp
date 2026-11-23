@@ -1,55 +1,68 @@
 # CSE 3292 — Web Development Bootcamp
 
-This repository contains the five-day practical plan for the
-**CampusConnect** project. Each day is stored in a separate folder and
-builds on the previous day's work.
+A five-day, project-based course that develops **CampusConnect**, a
+student project management application.
 
-## Bootcamp Structure
+## Learning Path
 
-| Day | Folder | Topic | Homework |
+| Day | Folder | Topic | Practical result |
 |---|---|---|---|
-| 1 | [day-1-web-basics](./day-1-web-basics) | HTML, CSS and JavaScript | Create a startup landing page |
-| 2 | [day-2-react-fundamentals](./day-2-react-fundamentals) | React fundamentals | Identify reusable startup components |
-| 3 | [day-3-nextjs-routing](./day-3-nextjs-routing) | Next.js and routing | Prepare the startup folder structure |
-| 4 | [day-4-backend-api-database](./day-4-backend-api-database) | Backend, API and database | Draw the frontend-backend-database architecture |
-| 5 | [day-5-ai-integration](./day-5-ai-integration) | AI vibe coding and integration | Present the startup technology stack and architecture |
+| 1 | [day-1-web-basics](./day-1-web-basics) | HTML, CSS and JavaScript | Responsive registration and landing page |
+| 2 | [day-2-react-fundamentals](./day-2-react-fundamentals) | React and Vite | Interactive task manager |
+| 3 | [day-3-nextjs-routing](./day-3-nextjs-routing) | Next.js App Router | Multi-page website with shared layouts |
+| 4 | [day-4-backend-api-database](./day-4-backend-api-database) | Express and MongoDB | REST API with CRUD operations |
+| 5 | [day-5-ai-integration](./day-5-ai-integration) | AI-assisted integration | Full-stack project dashboard |
 
-## CampusConnect
+## Architecture
 
-CampusConnect is a project management website for campus students.
-The practical examples demonstrate how a normal web page develops into
-React components, Next.js pages, API-connected data and an AI-assisted
-startup project.
+```text
+Browser
+   |
+   v
+Next.js frontend
+   |
+   v
+Express REST API
+   |
+   v
+MongoDB
+```
 
-## Daily Learning Flow
+Each day includes a 60-minute schedule, implementation guide, homework,
+and learning outcomes.
 
-Each session is 60 minutes. The minute-by-minute schedule is specific to
-each day and is documented in that day's README.
+## Prerequisites
 
-## Technologies
+- Node.js 24 or newer
+- npm
+- Visual Studio Code
+- A modern web browser
+- MongoDB local or MongoDB Atlas for Days 4 and 5
 
-- HTML
-- CSS
-- JavaScript
-- React
-- Vite
-- Next.js
-- Express
-- REST APIs
-- JSON
-- MongoDB
-- AI coding agents
+Verify the Node.js installation:
+
+```powershell
+node --version
+npm --version
+```
 
 ## Getting Started
 
 ### Day 1
 
-Open [day-1-web-basics/index.html](./day-1-web-basics/index.html) directly
-in a browser or serve the folder with a local static server.
+Open [day-1-web-basics/index.html](./day-1-web-basics/index.html) directly,
+or run:
+
+```powershell
+cd day-1-web-basics
+python -m http.server 4173
+```
+
+Open `http://localhost:4173`.
 
 ### Day 2
 
-```bash
+```powershell
 cd day-2-react-fundamentals
 npm install
 npm run dev
@@ -57,26 +70,51 @@ npm run dev
 
 ### Day 3
 
-```bash
+```powershell
 cd day-3-nextjs-routing
 npm install
 npm run dev
 ```
 
-### Day 4 and Day 5
+### Day 4
 
-Day 4 requires a running MongoDB instance and its `.env` configuration.
-Start Day 4's Express API first; then start the Day 5 Next.js app in another
-terminal. See the [Day 4 setup](./day-4-backend-api-database/README.md) and
-[Day 5 setup](./day-5-ai-integration/README.md) for the required environment
-variables and commands.
-
-## Production Builds
-
-For the Vite and Next.js projects:
-
-```bash
-npm run build
+```powershell
+cd day-4-backend-api-database
+npm install
+Copy-Item .env.example .env
+npm run dev
 ```
 
-Run the command from the individual project's folder.
+Configure `MONGODB_URI` and `MONGODB_DATABASE` in `.env`. The API runs at
+`http://localhost:3004`.
+
+### Day 5
+
+Start the Day 4 API, open a second terminal, and run:
+
+```powershell
+cd day-5-ai-integration
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`.
+
+## Verification
+
+| Project | Verification commands |
+|---|---|
+| Day 2 | `npm run build` |
+| Day 3 | `npm run lint` and `npm run build` |
+| Day 4 | `npm test` |
+| Day 5 | `npm run lint` and `npm run build` |
+
+For the integrated project, verify project creation, editing, deletion,
+error handling, and responsive layout.
+
+## Repository Guidelines
+
+- Never commit `.env` files or database credentials.
+- Keep `node_modules`, build output, and framework caches untracked.
+- Use HTTPS or a trusted local database connection.
+- Review and test AI-generated changes before keeping them.

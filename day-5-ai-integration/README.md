@@ -135,6 +135,13 @@ If a command fails, read the full error and fix the root cause. Do not invent ba
 - Review the changed files and run lint/build
 - Check that errors are visible instead of silently showing fake data
 
+Run:
+
+```powershell
+npm run lint
+npm run build
+```
+
 ## Homework
 
 Each team presents its startup's frontend framework, routes, components,
