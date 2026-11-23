@@ -3,6 +3,14 @@
 Day 3 introduces Next.js website architecture, the App Router and reusable
 layout components. The live example is a three-page CampusConnect website.
 
+The project was scaffolded with the latest Next.js CLI using JavaScript,
+the App Router, ESLint and npm. To create a fresh project with the same
+options, run:
+
+```bash
+npx create-next-app@latest campusconnect --javascript --app --use-npm --eslint --no-tailwind --import-alias "@/*"
+```
+
 ## 60-Minute Schedule
 
 | Time | Topic |
@@ -39,14 +47,70 @@ components/
 └── Footer.js
 ```
 
+The implemented project structure is:
+
+```text
+day-3-nextjs-routing/
+├── package.json
+├── public/
+└── src/
+    ├── app/
+    │   ├── layout.js
+    │   ├── page.js
+    │   ├── globals.css
+    │   ├── about/
+    │   │   └── page.js
+    │   └── dashboard/
+    │       └── page.js
+    └── components/
+        ├── Navbar.js
+        └── Footer.js
+```
+
 | File | Purpose |
 |---|---|
 | `app/page.js` | Main website page |
 | `app/about/page.js` | About page |
 | `app/dashboard/page.js` | Dashboard page |
 | `app/layout.js` | Shared layout for the application |
-| `components/Navbar.js` | Reusable navigation component |
-| `components/Footer.js` | Reusable footer component |
+| `src/components/Navbar.js` | Reusable navigation component using Next.js `Link` |
+| `src/components/Footer.js` | Shared footer rendered by the root layout |
+
+## Explore App Router Concepts
+
+- `src/app/page.js` maps to `/`.
+- `src/app/about/page.js` maps to `/about`.
+- `src/app/dashboard/page.js` maps to `/dashboard`.
+- `src/app/layout.js` wraps every route with the same navigation and footer.
+- Pages and shared components render as Server Components by default.
+- `next/link` navigates between internal routes without a full page reload.
+- Each page exports route-specific metadata for its document title.
+
+## Run the Project
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open:
+
+- `http://localhost:3000`
+- `http://localhost:3000/about`
+- `http://localhost:3000/dashboard`
+
+Create a production build:
+
+```bash
+npm run build
+```
 
 ## Homework
 
