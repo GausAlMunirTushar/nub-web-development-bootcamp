@@ -3,6 +3,10 @@
 Day 4 demonstrates how data moves from a browser frontend through an
 Express 5 REST API into MongoDB.
 
+The PDF's database exercise mentions PostgreSQL or Supabase. This
+implementation uses MongoDB as requested; the frontend → API → database
+flow and CRUD learning goals stay the same.
+
 ## 60-Minute Schedule
 
 | Time | Topic |
@@ -178,6 +182,8 @@ Include:
 - The HTTP method for each major operation
 - Possible data: name, email, department, project, task, status, timestamp,
   and user role
+- If authentication is included, use an auth provider or a password hash;
+  never store a plain-text password
 
 ## Learning Outcomes
 

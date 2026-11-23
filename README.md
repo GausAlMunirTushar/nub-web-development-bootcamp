@@ -23,12 +23,8 @@ startup project.
 
 ## Daily Learning Flow
 
-Each one-hour session follows this schedule:
-
-1. 15 minutes: Concepts
-2. 30 minutes: Live coding
-3. 10 minutes: Student practice
-4. 5 minutes: Quick assessment
+Each session is 60 minutes. The minute-by-minute schedule is specific to
+each day and is documented in that day's README.
 
 ## Technologies
 
@@ -59,8 +55,38 @@ npm install
 npm run dev
 ```
 
-To create a production build:
+### Day 3
+
+```bash
+cd day-3-nextjs-routing
+npm install
+npm run dev
+```
+
+### Day 4 and Day 5
+
+Day 4 requires a running MongoDB instance and its `.env` configuration.
+Start Day 4's Express API first; then start the Day 5 Next.js app in another
+terminal. See the [Day 4 setup](./day-4-backend-api-database/README.md) and
+[Day 5 setup](./day-5-ai-integration/README.md) for the required environment
+variables and commands.
+
+## Assessment
+
+| Area | Marks |
+|---|---:|
+| HTML, CSS and JavaScript | 2 |
+| React / Next.js | 3 |
+| Backend and API concepts | 3 |
+| Routing, components and architecture | 2 |
+| **Total** | **10** |
+
+## Production Builds
+
+For the Vite and Next.js projects:
 
 ```bash
 npm run build
 ```
+
+Run the command from the individual project's folder.
