@@ -38,9 +38,10 @@ Each one-hour session follows this schedule:
 - React
 - Vite
 - Next.js
+- Express
 - REST APIs
 - JSON
-- PostgreSQL or Supabase
+- MongoDB
 - AI coding agents
 
 ## Getting Started

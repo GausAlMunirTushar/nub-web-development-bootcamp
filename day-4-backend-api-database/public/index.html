@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore how a frontend, REST API, backend and MongoDB work together."
+    />
+    <title>CampusConnect | Projects API</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a class="brand" href="/">
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <span>CampusConnect</span>
+        </a>
+        <span class="api-indicator" id="apiStatus">
+          <span class="status-dot" aria-hidden="true"></span>
+          Connecting to API
+        </span>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <div>
+            <p class="eyebrow">Day 4 · Backend, API &amp; Database</p>
+            <h1>See how your data moves.</h1>
+            <p class="hero-copy">
+              Add a project in the browser, send it through a REST API, and
+              save it in MongoDB.
+            </p>
+          </div>
+          <div class="flow" aria-label="Frontend to API to database">
+            <span>Frontend</span>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <span>REST API</span>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <span>MongoDB</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="container workspace">
+        <div class="workspace-heading">
+          <div>
+            <p class="eyebrow">CampusConnect workspace</p>
+            <h2>Student projects</h2>
+          </div>
+          <div class="project-total">
+            <strong id="projectCount">—</strong>
+            <span>projects</span>
+          </div>
+        </div>
+
+        <div class="workspace-grid">
+          <section class="form-panel" aria-labelledby="formTitle">
+            <h3 id="formTitle">Create a project</h3>
+            <p class="panel-copy">The form sends a POST or PUT request to the API.</p>
+            <form id="projectForm">
+              <label for="projectName">Project name</label>
+              <input
+                id="projectName"
+                name="name"
+                type="text"
+                maxlength="120"
+                placeholder="Example: Campus event planner"
+                required
+              />
+
+              <label for="projectDescription">Description</label>
+              <textarea
+                id="projectDescription"
+                name="description"
+                rows="4"
+                maxlength="2000"
+                placeholder="What is your team building?"
+              ></textarea>
+
+              <label for="projectStatus">Status</label>
+              <select id="projectStatus" name="status">
+                <option>Planned</option>
+                <option>In progress</option>
+                <option>Completed</option>
+              </select>
+
+              <div class="form-actions">
+                <button class="button button-primary" id="saveButton" type="submit">
+                  Create project
+                </button>
+                <button class="button button-secondary" id="cancelEdit" type="button" hidden>
+                  Cancel edit
+                </button>
+              </div>
+            </form>
+          </section>
+
+          <section class="projects-panel" aria-labelledby="projectsTitle">
+            <div class="projects-heading">
+              <div>
+                <h3 id="projectsTitle">All projects</h3>
+                <p class="panel-copy">Data is loaded with GET /api/projects.</p>
+              </div>
+              <button class="refresh-button" id="refreshButton" type="button">
+                Refresh
+              </button>
+            </div>
+            <p class="notice" id="notice" role="status" hidden></p>
+            <div class="project-list" id="projectList" aria-live="polite">
+              <p class="loading-message">Loading projects from the database…</p>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="api-guide">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Explore the API</p>
+            <h2>Four methods. One resource.</h2>
+            <p>These routes use the same project data shown above.</p>
+          </div>
+          <div class="endpoint-list">
+            <article class="endpoint">
+              <span class="method method-get">GET</span>
+              <code>/api/projects</code>
+              <p>Read all projects</p>
+            </article>
+            <article class="endpoint">
+              <span class="method method-post">POST</span>
+              <code>/api/projects</code>
+              <p>Create a project</p>
+            </article>
+            <article class="endpoint">
+              <span class="method method-put">PUT</span>
+              <code>/api/projects/:id</code>
+              <p>Update a project</p>
+            </article>
+            <article class="endpoint">
+              <span class="method method-delete">DELETE</span>
+              <code>/api/projects/:id</code>
+              <p>Delete a project</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>CampusConnect · Day 4 API and database lab</p>
+        <p>Project records are stored in MongoDB.</p>
+      </div>
+    </footer>
+  </body>
+</html>

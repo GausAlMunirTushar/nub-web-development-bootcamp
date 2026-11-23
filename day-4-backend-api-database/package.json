@@ -1,0 +1,18 @@
+{
+  "name": "campusconnect-api-database",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An Express REST API and MongoDB database for the Day 4 web development bootcamp.",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js",
+    "dev": "node --watch --env-file-if-exists=.env server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongodb": "^6.19.0"
+  }
+}
