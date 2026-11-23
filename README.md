@@ -71,16 +71,6 @@ terminal. See the [Day 4 setup](./day-4-backend-api-database/README.md) and
 [Day 5 setup](./day-5-ai-integration/README.md) for the required environment
 variables and commands.
 
-## Assessment
-
-| Area | Marks |
-|---|---:|
-| HTML, CSS and JavaScript | 2 |
-| React / Next.js | 3 |
-| Backend and API concepts | 3 |
-| Routing, components and architecture | 2 |
-| **Total** | **10** |
-
 ## Production Builds
 
 For the Vite and Next.js projects:
